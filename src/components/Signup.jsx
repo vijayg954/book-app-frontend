@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import { Urlbase } from "./Urlbase";
 
 const Signup = () => {
   const {
@@ -18,7 +17,7 @@ const Signup = () => {
       password: data.password,
     };
     await axios
-      .post(`${Urlbase}/user/signup`, userinfo)
+      .post("https://bookapp-11m1.onrender.com/user/signup", userinfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {
