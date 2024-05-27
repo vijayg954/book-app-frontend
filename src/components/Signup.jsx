@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Login from "./Login";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import { Urlbase } from "./Urlbase";
 
 const Signup = () => {
   const {
@@ -17,7 +18,7 @@ const Signup = () => {
       password: data.password,
     };
     await axios
-      .post("/user/signup", userinfo)
+      .post(`${Urlbase}/user/signup`, userinfo)
       .then((res) => {
         console.log(res.data);
         if (res.data) {

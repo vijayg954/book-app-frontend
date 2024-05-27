@@ -3,13 +3,14 @@ import Cardsg from "./Cardsg";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { Urlbase } from "./Urlbase";
 
 const Course = () => {
   const [book, setbook] = useState([]);
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("/book");
+        const res = await axios.get(`${Urlbase}/book`);
         console.log(res.data);
         setbook(res.data);
       } catch (error) {

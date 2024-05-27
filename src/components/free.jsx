@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick.css";
 import axios from "axios"
 import "slick-carousel/slick/slick-theme.css";
 import { useState,useEffect } from "react";
+import { Urlbase } from "./Urlbase";
 
 import Cardsg from "./Cardsg";
 
@@ -13,8 +14,8 @@ const free = () => {
   useEffect(() => {
     const getBook = async () => {
       try {
-        const res = await axios.get("/book");
-        const data= await res.data.filter((data)=>data.category==="free");
+        const res = await axios.get(`${Urlbase}/book`);
+        const data=  res.data.filter((data)=>data.category==="free");
         setbook(data)
         console.log(data);
       } catch (error) {
