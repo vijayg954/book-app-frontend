@@ -4,7 +4,8 @@ import Login from "./Login";
 import { useAuth } from "../context/AuthProvider";
 import Logout1 from "./Logout1";
 import { Link } from "react-router-dom";
-
+// import { Link } from "react-router-dom";
+// import About from "./About";
 const Navbar = () => {
   const [authuser, setauthuser] = useAuth();
   const [sticky, setsticky] = useState(false);
@@ -41,16 +42,16 @@ const Navbar = () => {
   const navitems = (
     <>
       <li>
-        <a href="/">Home</a>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <a href="/Course">Course</a>
+        <Link to="/Course">Course</Link>
       </li>
       <li>
-        <Link to="/Contact">Contact</Link>
+        <Link to="/Contactme">Contact</Link>
       </li>
       <li>
-        <a href="/About">About</a>
+        <Link to="/About">About</Link>
       </li>
     </>
   );
