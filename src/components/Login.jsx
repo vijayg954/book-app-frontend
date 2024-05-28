@@ -11,6 +11,7 @@ const Login = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    e.preventDefault();
     const userinfo = {
       email: data.email,
       password: data.password,
