@@ -10,8 +10,8 @@ const Login = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (e,data) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+ 
     const userinfo = {
       email: data.email,
       password: data.password,
