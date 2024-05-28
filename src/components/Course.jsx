@@ -27,10 +27,7 @@ const Course = () => {
             we are delighted to have you heare
           </h1>
           <p className="mt-10">
-            Ad excepteur ad esse consequat qui nisi occaecat ipsum. In excepteur
-            do nulla dolore nisi dolor dolor cillum veniam eiusmod elit in. Ea
-            irure culpa exercitation pariatur amet ut voluptate cillum deserunt
-            sunt.
+          welcome
           </p>
           <Link to="/">
             <button className="bg-pink-500 rounded-md text-white px-4 py-2 hover:bg-pink-700 duration-700">
